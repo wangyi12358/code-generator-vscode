@@ -15,9 +15,8 @@ export const ${camelCaseName}: React.FC<${camelCaseName}Props> = () => {
     <div>
       ${componentName}
     </div>
-  )
-}
-  `;
+  );
+};`;
 };
 
 const indexTemplate = (componentName: string) => {
@@ -50,7 +49,7 @@ export async function createComponent(dirPath: string) {
   mkdirSync(join(dirPath, componentName));
 
   // create index file
-  writeFileSync(join(dirPath, componentName, 'index.ts'), indexTemplate(camelCaseName), 'utf-8');
+  writeFileSync(join(dirPath, componentName, 'index.ts'), indexTemplate(componentName), 'utf-8');
 
   // create component file
   writeFileSync(join(dirPath, componentName, `${componentName}.tsx`), componentTemplate(componentName, camelCaseName), 'utf-8');

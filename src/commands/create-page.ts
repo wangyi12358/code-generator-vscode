@@ -11,10 +11,10 @@ const ${camelCaseName}: React.FC = () => {
     <div>
       ${camelCaseName}
     </div>
-  )
-}
-export default ${camelCaseName};
-  `;
+  );
+};
+
+export default ${camelCaseName};`;
 }
 
 export async function createPage(dirPath: string) {

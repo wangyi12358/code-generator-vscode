@@ -1,11 +1,12 @@
 {
-  "name": "codegenerator",
-  "displayName": "code-generator",
-  "description": "code-generator",
-  "version": "0.0.1",
+  "name": "code-template-generator",
+  "displayName": "code-template-generator",
+  "description": "code-template-generator",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.84.0"
   },
+  "publisher": "mika",
   "categories": [
     "Other"
   ],
