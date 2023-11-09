@@ -16,12 +16,21 @@
       {
         "command": "createComponent",
         "title": "Create RC"
+      },
+      {
+        "command": "createPage",
+        "title": "Create RP"
       }
     ],
     "menus": {
       "explorer/context": [
         {
           "command": "createComponent",
+          "group": "1_modification",
+          "when": "explorerResourceIsFolder"
+        },
+        {
+          "command": "createPage",
           "group": "1_modification",
           "when": "explorerResourceIsFolder"
         }
