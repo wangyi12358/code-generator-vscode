@@ -1,14 +1,14 @@
-## codegenerator
+## code-template-generator
 
-## Features
+## 功能
 
-- 快速创建模版文件组件
+1. 快速创建模版文件组件
+2. `Create RC` 快速创建组件模版文件
+3. `Create RP` 快速创建路由模版文件
 
-## Release Notes
+## 如何使用
 
-Users appreciate release notes as you update your extension.
+右键文件夹，选择 `Create RC` 或 `Create RP`，输入中划线分割文件名（列如：table-list），回车即可
 
-### 1.0.0
+![conv_ops](./assets/demo.gif)
 
-1. 创建 react component 模版
-2. 创建 react router page 模版
