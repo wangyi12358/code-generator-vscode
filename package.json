@@ -2,7 +2,7 @@
   "name": "code-template-generator",
   "displayName": "code-template-generator",
   "description": "code-template-generator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "engines": {
     "vscode": "^1.84.0"
   },
@@ -16,11 +16,15 @@
     "commands": [
       {
         "command": "createComponent",
-        "title": "Create RC"
+        "title": "New component"
       },
       {
         "command": "createPage",
-        "title": "Create RP"
+        "title": "New page"
+      },
+      {
+        "command": "createNext",
+        "title": "New next page"
       }
     ],
     "menus": {
@@ -32,6 +36,11 @@
         },
         {
           "command": "createPage",
+          "group": "1_modification",
+          "when": "explorerResourceIsFolder"
+        },
+        {
+          "command": "createNext",
           "group": "1_modification",
           "when": "explorerResourceIsFolder"
         }
