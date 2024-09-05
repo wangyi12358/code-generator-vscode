@@ -1,6 +1,6 @@
 import { mkdirSync, writeFileSync } from 'fs';
 import { join } from 'path';
-import { window } from "vscode";
+import { QuickPickItemKind, window } from "vscode";
 import { camelCase } from "../utils/camel-case";
 
 const componentTemplate = (componentName: string, camelCaseName: string) => {
@@ -10,7 +10,7 @@ export interface ${camelCaseName}Props {
 
 }
 
-export const ${camelCaseName}: React.FC<${camelCaseName}Props> = () => {
+export function ${camelCaseName}(props: ${camelCaseName}Props) {
   return (
     <div>
       ${componentName}
@@ -38,6 +38,11 @@ export async function createComponent(dirPath: string) {
       }
     }
   });
+
+  const type = await window.showQuickPick([
+    { label: '基础组件', key: 'base', kind: QuickPickItemKind.Default },
+    { label: '弹窗组件', key: 'modal',  },
+  ]);
 
   if (!componentName) {
     return;

@@ -6,15 +6,13 @@ import { camelCase } from "../utils/camel-case";
 function pageTemplate(camelCaseName: string) {
   return `import React from 'react';
 
-const ${camelCaseName}: React.FC = () => {
+export default function ${camelCaseName}() {
   return (
     <div>
       ${camelCaseName}
     </div>
   );
-};
-
-export default ${camelCaseName};`;
+};`;
 }
 
 export async function createPage(dirPath: string) {

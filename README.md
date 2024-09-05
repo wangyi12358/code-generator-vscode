@@ -11,7 +11,7 @@
 
 右键文件夹，选择 `New component` 或 `New page`，输入中划线分割文件名（列如：table-list），回车即可
 
-![conv_ops](./assets/demo.gif)
+![conv_ops](https://github.com/wangyi12358/code-generator-vscode/blob/main/assets/demo.gif?raw=true)
 
 
 ## Debug
@@ -23,3 +23,5 @@ npm run watch # 按 F5 进入调试模式
 ```bash
 vsce package
 ```
+## 开发插件
+1. F5 进入调试模式

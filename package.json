@@ -2,7 +2,7 @@
   "name": "code-template-generator",
   "displayName": "code-template-generator",
   "description": "code-template-generator",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "engines": {
     "vscode": "^1.84.0"
   },
