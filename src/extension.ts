@@ -2,7 +2,6 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 import { createComponent } from './commands/create-component';
-import { createNext } from './commands/create-next';
 import { createPage } from './commands/create-page';
 
 
@@ -33,14 +32,8 @@ export function activate(context: vscode.ExtensionContext) {
     await createPage(dirPath);
   });
 
-  const createNextCommand = vscode.commands.registerCommand('createNext', async (uri: vscode.Uri) => {
-    const dirPath = uri.fsPath;
-    await createNext(dirPath);
-  });
-
   context.subscriptions.push(createComponentCommand);
   context.subscriptions.push(createPageCommand);
-  context.subscriptions.push(createNextCommand);
 	// context.subscriptions.push(disposable);
 }
 

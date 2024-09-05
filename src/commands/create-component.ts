@@ -19,6 +19,28 @@ export function ${camelCaseName}(props: ${camelCaseName}Props) {
 };`;
 };
 
+const modalComponentTemplate = (componentName: string, camelCaseName: string) => {
+  return `import React from 'react';
+import { Modal } from '@/components/antd';
+import NiceModal, { antdModalV5, useModal } from '@ebay/nice-modal-react';
+
+export interface ${camelCaseName}Props {
+}
+
+export const ${camelCaseName} = NiceModal.create<${camelCaseName}Props>(() => {
+  const modal = useModal();
+  const antdV5Modal = antdModalV5(modal);
+
+  return (
+    <Modal
+      {...antdV5Modal}
+    >
+      ${componentName}
+    </Modal>
+  );
+});`;
+};
+
 const indexTemplate = (componentName: string) => {
   return `export * from './${componentName}';`;
 };
@@ -57,5 +79,10 @@ export async function createComponent(dirPath: string) {
   writeFileSync(join(dirPath, componentName, 'index.ts'), indexTemplate(componentName), 'utf-8');
 
   // create component file
-  writeFileSync(join(dirPath, componentName, `${componentName}.tsx`), componentTemplate(componentName, camelCaseName), 'utf-8');
+
+  writeFileSync(
+    join(dirPath, componentName, `${componentName}.tsx`),
+    type?.key === 'base' ? componentTemplate(componentName, camelCaseName) : modalComponentTemplate(componentName, camelCaseName),
+     'utf-8'
+  );
 }

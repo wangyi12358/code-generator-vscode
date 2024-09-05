@@ -21,10 +21,6 @@
       {
         "command": "createPage",
         "title": "New page"
-      },
-      {
-        "command": "createNext",
-        "title": "New next page"
       }
     ],
     "menus": {
@@ -36,11 +32,6 @@
         },
         {
           "command": "createPage",
-          "group": "1_modification",
-          "when": "explorerResourceIsFolder"
-        },
-        {
-          "command": "createNext",
           "group": "1_modification",
           "when": "explorerResourceIsFolder"
         }
