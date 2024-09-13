@@ -21,6 +21,10 @@
       {
         "command": "createPage",
         "title": "New page"
+      },
+      {
+        "command": "createHook",
+        "title": "New hook"
       }
     ],
     "menus": {
@@ -32,6 +36,11 @@
         },
         {
           "command": "createPage",
+          "group": "1_modification",
+          "when": "explorerResourceIsFolder"
+        },
+        {
+          "command": "createHook",
           "group": "1_modification",
           "when": "explorerResourceIsFolder"
         }
